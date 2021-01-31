@@ -1,8 +1,11 @@
 <?php
 
-	$dsn = 'mysql:host= remotemysql.com;dbname=PqaTu0evkE';
-	$user = 'PqaTu0evkE';
-	$pass = 'nkzN970fqw';
+
+        $dsn=getenv('PqaTu0evkE');
+        $user=getenv('PqaTu0evkE');
+        $pass=getenv('nkzN970fqw');
+        
+
 	$option = array(
 		PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8',
 	);
