@@ -1,8 +1,12 @@
 <?php
 
-	$dsn = 'mysql:host= remotemysql.com;dbname=PqaTu0evkE';
-	$user = 'PqaTu0evkE';
-	$pass = 'nkzN970fqw';
+
+        $dsn=getenv('PqaTu0evkE');
+        $user=getenv('PqaTu0evkE');
+        $pass=getenv('nkzN970fqw');
+        $con=mysqli_connect ("remotemysql.com",$dsn,$pass,$user) or die ('I cannot connect to the database because: ' . mysql_error());
+        mysqli_select_db ($con,$dbname);
+
 	$option = array(
 		PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8',
 	);
